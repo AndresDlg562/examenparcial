@@ -20,7 +20,7 @@ export default function WelcomePage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-amber-50">
       <WelcomeMessage
         fullName={memberData.fullName}
         membershipNumber={memberData.membershipNumber}

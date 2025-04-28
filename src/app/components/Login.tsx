@@ -42,7 +42,7 @@ export default function Login() {
             name="username"
             type="text"
             required
-            className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            className="appearance-none rounded-none relative block w-full px-3 py-2 border border-amber-300 placeholder-gray-400 text-gray-900 rounded-t-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 focus:z-10 sm:text-sm"
             placeholder="Nombre de usuario"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -57,7 +57,7 @@ export default function Login() {
             name="password"
             type="password"
             required
-            className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            className="appearance-none rounded-none relative block w-full px-3 py-2 border border-amber-300 placeholder-gray-400 text-gray-900 rounded-b-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 focus:z-10 sm:text-sm"
             placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -66,13 +66,13 @@ export default function Login() {
       </div>
 
       {error && (
-        <div className="text-red-500 text-sm text-center">{error}</div>
+        <div className="text-red-600 text-sm text-center">{error}</div>
       )}
 
       <div>
         <button
           type="submit"
-          className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
         >
           Iniciar sesión
         </button>
