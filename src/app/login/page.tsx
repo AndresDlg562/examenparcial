@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Member } from '../interfaces/member';
+import { members } from '../data/members';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -13,10 +15,17 @@ export default function LoginPage() {
     e.preventDefault();
     setError('');
 
-    // Aquí deberías implementar la lógica real de autenticación
-    // Por ahora, usaremos un ejemplo simple
-    if (username === 'socio' && password === 'aurora123') {
-      router.push(`/welcome?name=${encodeURIComponent(username)}`);
+    const member = members.find(
+      (m) => m.username === username && m.password === password
+    );
+
+    if (member) {
+      // Store member data in sessionStorage
+      sessionStorage.setItem('memberData', JSON.stringify({
+        fullName: member.fullName,
+        membershipNumber: member.membershipNumber
+      }));
+      router.push('/welcome');
     } else {
       setError('Usuario o contraseña incorrectos');
     }
